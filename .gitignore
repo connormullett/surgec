@@ -1,0 +1,4 @@
+.vscode/
+foo.c
+build/
+obj/
