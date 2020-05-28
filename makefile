@@ -3,7 +3,7 @@ CC=g++
 CXXFLAGS=-g -O2 -Wall
 
 DEPS = headers/lex.hpp headers/types.hpp
-OBJ = obj/lex.o obj/types.o obj/main.o
+OBJ = obj/lex.o obj/types.o obj/main.o obj/parse.o
 
 build/surge: $(OBJ)
 	$(CC) -o $@ $^ $(CXXFLAGS)

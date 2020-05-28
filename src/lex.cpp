@@ -86,7 +86,7 @@ Lexem Lexer::createLexem(int id, std::string symbol){
 
 bool Lexer::isNumber(std::string s) {
     if (s.empty()) return false;
-    for (int i = 0; i < s.length(); i++) {
+    for (size_t i = 0; i < s.length(); i++) {
         if (!isdigit(s[i])) return false;
     }
 

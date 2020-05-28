@@ -35,4 +35,16 @@ class Lexem {
         std::string toString();
 };
 
+#define INT_MAX 2147483647
+#define INT_MIN -2147483647 - 1
+
+struct AST_NODE {
+
+};
+typedef struct AST_NODE node;
+
+class SyntaxTree {
+
+};
+
 #endif
