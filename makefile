@@ -2,7 +2,7 @@
 CC=g++
 CXXFLAGS=-g -O2 -Wall
 
-DEPS = headers/lex.hpp headers/types.hpp
+DEPS = headers/lex.hpp headers/types.hpp headers/types/syntax_tree.hpp
 OBJ = obj/lex.o obj/types.o obj/main.o
 BINDIR = /usr/bin
 
