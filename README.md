@@ -27,6 +27,7 @@ Key -
     `null` not started
     `/` refining
 
+
  [X] Lexical Analysis
  [-] Syntax Analysis
  [ ] Semantic Analysis
