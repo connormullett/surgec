@@ -21,7 +21,12 @@ _deciphered_ from the enum `LexemTypes` in `headers/types.hpp`
  - `surge {C source file}`
 
 ## Progress
-Key - `x` mvp , `-` inprogress , `null` not started , `/` refining
+Key - 
+    `x` mvp
+    `-` inprogress
+    `null` not started
+    `/` refining
+
  [X] Lexical Analysis
  [-] Syntax Analysis
  [ ] Semantic Analysis
