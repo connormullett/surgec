@@ -109,3 +109,7 @@ std::string Lexer::read_file_to_string() {
         (std::istreambuf_iterator<char>()   ) );
     return content;
 }
+
+std::vector<Lexem>* Lexer::get_lexems() {
+    return &t_lexems;
+}

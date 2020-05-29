@@ -21,5 +21,6 @@ class Lexer {
     public:
         Lexer(std::string filePath);
         void lex();
+        std::vector<Lexem>* get_lexems();
         void print_lexems();
 };
