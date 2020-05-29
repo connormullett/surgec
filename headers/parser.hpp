@@ -14,13 +14,17 @@ private:
     std::vector<Lexem>* _tokens;
     SyntaxTree* AST;
 
-    // stores identifier data where key = Symbol->name
     std::unordered_map<std::string, Symbol> sym_table;
 
     Symbol* try_get_symbol(std::string key);
     void push_symbol(Symbol symbol);
 
     AST_NODE* parse_statement();
+    AST_NODE* parse_expression();
+    AST_NODE* parse_int();
+    AST_NODE* parse_function();
+    AST_NODE* parse_identifier();
+    AST_NODE* parse_program();
 
 public:
     Parser(std::vector<Lexem>* tokens);
