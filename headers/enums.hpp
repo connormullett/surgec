@@ -1,4 +1,6 @@
 
+#pragma once
+
 enum LexemTypes {
     NEW_LINE,
     NULL_TOK,

@@ -1,5 +1,7 @@
 
 #include "../headers/types.hpp"
+#include "../headers/lexem.hpp"
+#include "../headers/syntax_tree.hpp"
 
 Lexem::Lexem(int id, LexemTypes type, std::string symbol) :
     id(id), type(type), symbol(symbol) { }

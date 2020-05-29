@@ -1,12 +1,12 @@
-#ifndef __LEX_H
-#define __LEX_H
+
+#pragma once
 
 #include <stdio.h>
 #include <string>
 #include <vector>
 #include <fstream>
 
-#include "types.hpp"
+#include "lexem.hpp"
 
 
 class Lexer {
@@ -23,5 +23,3 @@ class Lexer {
         void lex();
         void printLexems();
 };
-
-#endif

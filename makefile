@@ -2,8 +2,8 @@
 CC=g++
 CXXFLAGS=-g -O2 -Wall
 
-DEPS = headers/lex.hpp headers/types.hpp headers/types/syntax_tree.hpp
-OBJ = obj/lex.o obj/types.o obj/main.o
+DEPS = headers/lex.hpp headers/types.hpp headers/syntax_tree.hpp headers/ast_node.hpp headers/lexem.hpp headers/parser.hpp headers/enums.hpp
+OBJ = obj/lex.o obj/types.o obj/main.o obj/ast_node.o obj/lexem.o obj/parser.o obj/syntax_tree.o obj/types.o
 BINDIR = /usr/bin
 
 build/surge: $(OBJ)
