@@ -12,14 +12,14 @@
 class Lexer {
     private:
         std::string fileName;
-        std::string readFileToString();
-        bool isNumber(std::string s);
-        Lexem createLexem(int id, std::string symbol);
+        std::string read_file_to_string();
+        bool is_number(std::string s);
+        Lexem create_lexem(int id, std::string symbol);
 
         std::vector<Lexem> t_lexems;
 
     public:
         Lexer(std::string filePath);
         void lex();
-        void printLexems();
+        void print_lexems();
 };

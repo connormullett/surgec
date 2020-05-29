@@ -1,19 +1,23 @@
 
 #pragma once
 
+#include "lexem.hpp"
+
+#include <string>
+
 class AST_NODE {
 public:
-    LexemTypes _tokType;
-    NodeType _nodeType;
+    LexemTypes _tok_type;
+    NodeType _node_type;
     Lexem* _token;
-    int* _integerValue;
-    std::string _stringLiteralValue;
+    int* _integer_literal;
+    std::string _string_literal;
     std::string _operation;
-    AST_NODE* _leftChild;
-    AST_NODE* _rightChild;
+    AST_NODE* _left_child;
+    AST_NODE* _right_child;
 
-    AST_NODE(LexemTypes tokType, NodeType nodeType, Lexem* token,
-        int* integerValue, std::string stringLiteralValue, 
-        std::string operation, AST_NODE* leftChild, AST_NODE* rightChild);
+    AST_NODE(LexemTypes tok_type, NodeType node_type, Lexem* token,
+        int* integer_literal, std::string string_literal, 
+        std::string operation, AST_NODE* left_child, AST_NODE* right_child);
     ~AST_NODE();
 };

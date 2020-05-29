@@ -2,8 +2,11 @@
 CC=g++
 CXXFLAGS=-g -O2 -Wall
 
-DEPS = headers/lex.hpp headers/types.hpp headers/syntax_tree.hpp headers/ast_node.hpp headers/lexem.hpp headers/parser.hpp headers/enums.hpp
-OBJ = obj/lex.o obj/types.o obj/main.o obj/ast_node.o obj/lexem.o obj/parser.o obj/syntax_tree.o obj/types.o
+DEPS = headers/lex.hpp headers/lexem.hpp headers/enums.hpp headers/parser.hpp headers/syntax_tree.hpp
+DEPS += headers/ast_node.hpp headers/symbol.hpp
+
+OBJ = obj/main.o obj/lexem.o obj/lex.o obj/parser.o obj/syntax_tree.o obj/ast_node.o
+
 BINDIR = /usr/bin
 
 build/surge: $(OBJ)
@@ -11,6 +14,8 @@ build/surge: $(OBJ)
 
 obj/%.o: src/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CXXFLAGS)
+
+
 
 .PHONY: clean install
 

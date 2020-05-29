@@ -1,6 +1,5 @@
 
 #include "../headers/lex.hpp"
-#include "../headers/types.hpp"
 #include <string>
 #include <iostream>
 
@@ -15,7 +14,7 @@ void Lexer::lex() {
     bool flag_complete_lexem = false;
     unsigned int lexem_id = 1;
 
-    std::string source = readFileToString();
+    std::string source = read_file_to_string();
 
     for (std::string::size_type i = 0; i < source.size(); ++i) {
         switch (source[i]) {
@@ -62,7 +61,7 @@ void Lexer::lex() {
 
         if (flag_complete_lexem) {
             if (token != "") {
-                auto t_lexem = createLexem(lexem_id++, token);
+                auto t_lexem = create_lexem(lexem_id++, token);
                 lexems.push_back(t_lexem);
             }
             lexems.push_back(lexem);
@@ -74,17 +73,17 @@ void Lexer::lex() {
     t_lexems = lexems;
 }
 
-Lexem Lexer::createLexem(int id, std::string symbol){
+Lexem Lexer::create_lexem(int id, std::string symbol){
     if (symbol.compare("int") == 0) return Lexem(id, LexemTypes::INT_KEYW, symbol);
     if (symbol.compare("return") == 0) return Lexem(id, LexemTypes::RET_KEYW, symbol);
     if (symbol.compare("bool") == 0) return Lexem(id, LexemTypes::BOOL_KEYW, symbol);
     if (symbol.compare("false") == 0) return Lexem(id, LexemTypes::FALSE_VAL, symbol);
     if (symbol.compare("true") == 0) return Lexem(id, LexemTypes::TRUE_VAL, symbol);
-    if (isNumber(symbol)) return Lexem(id, LexemTypes::INT_LITERAL, symbol);
+    if (is_number(symbol)) return Lexem(id, LexemTypes::INT_LITERAL, symbol);
     return Lexem(id, LexemTypes::IDENT, symbol);
 }
 
-bool Lexer::isNumber(std::string s) {
+bool Lexer::is_number(std::string s) {
     if (s.empty()) return false;
     for (size_t i = 0; i < s.length(); i++) {
         if (!isdigit(s[i])) return false;
@@ -93,18 +92,18 @@ bool Lexer::isNumber(std::string s) {
     return true;
 }
 
-void Lexer::printLexems() {
+void Lexer::print_lexems() {
     for (unsigned int i = 0; i < t_lexems.size(); i++) {
         if (t_lexems[i].type == LexemTypes::NULL_TOK) continue;
         if (t_lexems[i].type == LexemTypes::NEW_LINE) continue;
 
         std::cout << "(" << t_lexems[i].id 
-            << ") (" << t_lexems[i].toString()
+            << ") (" << t_lexems[i].to_string()
             << ") ( " << t_lexems[i].symbol << " ) " << std::endl;
     }
 }
 
-std::string Lexer::readFileToString() {
+std::string Lexer::read_file_to_string() {
     ifstream ifs(fileName);
     std::string content( (std::istreambuf_iterator<char>(ifs) ),
         (std::istreambuf_iterator<char>()   ) );

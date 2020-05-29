@@ -2,6 +2,7 @@
 #pragma once
 
 #include "enums.hpp"
+#include <string>
 
 class Lexem {
     public:
@@ -13,5 +14,5 @@ class Lexem {
 
         Lexem() = default;
 
-        std::string toString();
+        std::string to_string();
 };
