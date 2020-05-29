@@ -16,7 +16,5 @@ int main(int argc, char *argv[]) {
     lexer.lex();
     lexer.print_lexems();
 
-    Parser parser(lexer.get_lexems());
-
     return 0;
 }

@@ -2,10 +2,9 @@
 CC=g++
 CXXFLAGS=-g -O2 -Wall
 
-DEPS = headers/lex.hpp headers/lexem.hpp headers/enums.hpp headers/parser.hpp headers/syntax_tree.hpp
-DEPS += headers/ast_node.hpp headers/symbol.hpp
+DEPS = headers/lex.hpp headers/lexem.hpp headers/enums.hpp headers/parser.hpp
 
-OBJ = obj/main.o obj/lexem.o obj/lex.o obj/parser.o obj/syntax_tree.o obj/ast_node.o
+OBJ = obj/main.o obj/lexem.o obj/lex.o obj/parser.o 
 
 BINDIR = /usr/bin
 
