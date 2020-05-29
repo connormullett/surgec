@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "lexem.hpp"
+#include "lexeme.hpp"
 
 #include <string>
 

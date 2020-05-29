@@ -6,7 +6,7 @@
 #include <vector>
 #include <fstream>
 
-#include "lexem.hpp"
+#include "lexeme.hpp"
 
 
 class Lexer {
@@ -14,13 +14,13 @@ class Lexer {
         std::string fileName;
         std::string read_file_to_string();
         bool is_number(std::string s);
-        Lexem create_lexem(int id, std::string symbol);
+        Lexeme create_lexeme(int id, std::string symbol);
 
-        std::vector<Lexem> t_lexems;
+        std::vector<Lexeme> t_lexems;
 
     public:
         Lexer(std::string filePath);
         void lex();
-        std::vector<Lexem>* get_lexems();
+        std::vector<Lexeme>* get_lexems();
         void print_lexems();
 };

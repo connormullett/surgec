@@ -1,6 +1,6 @@
 
 #include "../headers/parser.hpp"
-#include "../headers/lexem.hpp"
+#include "../headers/lexeme.hpp"
 
 #include <vector>
 #include <unordered_map>
@@ -9,7 +9,7 @@
 #include <iostream>
 
 
-Parser::Parser(std::vector<Lexem>* tokens) {
+Parser::Parser(std::vector<Lexeme>* tokens) {
     _tokens = tokens;
     _token_iter = tokens->begin();
 }

@@ -6,17 +6,17 @@
 #include <string>
 #include <iterator>
 
-#include "lexem.hpp"
+#include "lexeme.hpp"
 
 class Parser {
 private:
-    std::vector<Lexem>* _tokens;
-    std::vector<Lexem>::iterator _token_iter;
+    std::vector<Lexeme>* _tokens;
+    std::vector<Lexeme>::iterator _token_iter;
     
     void print_error_and_exit(std::string message, int status);
 
 public:
-    Parser(std::vector<Lexem>* tokens);
+    Parser(std::vector<Lexeme>* tokens);
     ~Parser();
 
     void parse();

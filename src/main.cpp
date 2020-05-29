@@ -14,7 +14,6 @@ int main(int argc, char *argv[]) {
 
     Lexer lexer(argv[1]);
     lexer.lex();
-    lexer.print_lexems();
 
     return 0;
 }

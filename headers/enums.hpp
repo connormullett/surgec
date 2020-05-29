@@ -1,7 +1,7 @@
 
 #pragma once
 
-enum LexemTypes {
+enum LexemeTypes {
     NEW_LINE,
     NULL_TOK,
     INT_KEYW,
