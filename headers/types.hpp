@@ -1,5 +1,7 @@
-#ifndef __LEX_TYPES_H
-#define __LEX_TYPES_H
+#pragma once
+
+#define __SURGE_TYPES_H
+
 
 #include <string>
 #include <vector>
@@ -15,7 +17,7 @@ class Lexem {
         
         Lexem(int id, LexemTypes type, std::string symbol);
 
-        Lexem() { }
+        Lexem() = default;
 
         std::string toString();
 };
@@ -52,12 +54,12 @@ typedef struct Symbol {
 
 class SyntaxTree {
 private:
-    AST_NODE _root;
+    AST_NODE* _root;
     unsigned int _size;
-    std::vector<Lexem> _tokens;
+    std::vector<Lexem>* _tokens;
 
 public:
-    SyntaxTree(std::vector<Lexem> tokens);
+    SyntaxTree(std::vector<Lexem>* tokens);
     ~SyntaxTree();
 };
 
@@ -77,5 +79,3 @@ public:
 
     SyntaxTree* getAST();
 };
-
-#endif

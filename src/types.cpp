@@ -23,3 +23,8 @@ std::string Lexem::toString() {
     if (type == LexemTypes::TRUE_VAL) return "true";
     return "NULL_T";
 }
+
+
+SyntaxTree::SyntaxTree(std::vector<Lexem>* tokens) {
+    _tokens = tokens;
+}
