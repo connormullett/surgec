@@ -9,14 +9,13 @@ This compiler has barely any features which can be
 _deciphered_ from the enum `LexemTypes` in `headers/types.hpp`
 
 ## Requirements 
- - *nix environment (installs to `/usr/bin`)
  - CMake
- - root priviliges for installation
 
 ## Installation
  - Clone repository
  - cd into repository
  - `cmake .`
+ - `make`
  - `sudo make install`
  - `surge {C source file}`
 

@@ -1,5 +1,8 @@
 
 #include "lexer/lexer.h"
+#include "parser/parser.h"
+#include "parser/nodes.h"
+
 #include <iostream>
 
 using namespace std;
@@ -14,11 +17,9 @@ int main(int argc, char *argv[]) {
     string source = read_file_to_string(argv[1]);
     auto tokens = lex(source);
 
-    for (auto t : tokens) {
-        cout << t->getType() << endl;
-    }
+    Node* tree_root = parse(tokens);
 
-    tokens.push_back( new Token() );
-
+    tree_root->set_left( new Program() );
+    
     return 0;
 }
