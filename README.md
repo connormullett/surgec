@@ -10,13 +10,13 @@ _deciphered_ from the enum `LexemTypes` in `headers/types.hpp`
 
 ## Requirements 
  - *nix environment (installs to `/usr/bin`)
- - GNU Make
+ - CMake
  - root priviliges for installation
 
 ## Installation
  - Clone repository
  - cd into repository
- - `make`
+ - `cmake .`
  - `sudo make install`
  - `surge {C source file}`
 
