@@ -11,9 +11,14 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    Lexer lexer(argv[1]);
-    lexer.lex();
-    lexer.print_lexems();
+    string source = read_file_to_string(argv[1]);
+    auto tokens = lex(source);
+
+    for (auto t : tokens) {
+        cout << t->getType() << endl;
+    }
+
+    tokens.push_back( new Token() );
 
     return 0;
 }
