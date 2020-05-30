@@ -1,6 +1,5 @@
 
-#include "../headers/lex.hpp"
-#include "../headers/parser.hpp"
+#include "lexer/lexer.h"
 #include <iostream>
 
 using namespace std;
@@ -14,6 +13,7 @@ int main(int argc, char *argv[]) {
 
     Lexer lexer(argv[1]);
     lexer.lex();
+    lexer.print_lexems();
 
     return 0;
 }

@@ -19,24 +19,3 @@ enum LexemeTypes {
     TRUE_VAL,
     FALSE_VAL,
 };
-
-enum NodeType {
-    CONST,
-    EXPRES,
-    FUNC_DECL,
-    PROG,
-    STATEM,
-    INT_LIT,
-};
-
-enum Scope {
-    FUNCT_PARAM,
-    GLOBAL,
-    BLOCK_LOC,
-};
-
-enum SymbolType {
-    INT,
-    FUNCTION,
-    STRING,
-};

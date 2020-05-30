@@ -1,5 +1,5 @@
 
-#include "../headers/lexeme.hpp"
+#include "lexer/lexeme.h"
 
 #include <string>
 

@@ -1,5 +1,5 @@
 
-#include "../headers/lex.hpp"
+#include "lexer/lexer.h"
 #include <string>
 #include <iostream>
 

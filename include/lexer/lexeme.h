@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "enums.hpp"
+#include "enums.h"
 #include <string>
 
 class Lexeme {

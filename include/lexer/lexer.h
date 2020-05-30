@@ -6,7 +6,7 @@
 #include <vector>
 #include <fstream>
 
-#include "lexeme.hpp"
+#include "lexeme.h"
 
 
 class Lexer {
