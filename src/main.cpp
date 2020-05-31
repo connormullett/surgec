@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 
     Node* tree_root = parse(tokens);
 
-    tree_root->set_left( new Program() );
-    
-    print_error_and_exit( error{"done", 0} );
+    cout << tree_root->get_type() << endl;
+
+    return 0;
 }

@@ -24,6 +24,10 @@ void Node::set_right(Node* node) {
     right_child = node;
 }
 
+NodeType Node::get_type() {
+    return type;
+}
+
 
 Program::Program() {
     type = NodeType::PROGRAM;

@@ -23,6 +23,8 @@ public:
     void set_left(Node* node);
     void set_right(Node* node);
 
+    NodeType get_type();
+
     ~Node();
 };
 
