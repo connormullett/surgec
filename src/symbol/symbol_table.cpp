@@ -1,41 +1,14 @@
 
 #include "symbol/symbol_table.h"
+#include "symbol/symbol.h"
+#include "parser/nodes.h"
 
+#include <string>
+#include <unordered_map>
 
 using std::pair;
 using std::string;
 using std::unordered_map;
-
-
-Symbol::Symbol(string ident) {
-    identifier = ident;
-}
-
-SymbolType Symbol::get_type() {
-    return _type;
-}
-
-string Symbol::get_identifier() {
-    return identifier;
-}
-
-
-IntegerSymbol::IntegerSymbol(string identifier, int value) :
-    Symbol(identifier)
-{
-    _type = SymbolType::IntVariable;
-}
-
-int IntegerSymbol::get_value() {
-    return _value;
-}
-
-
-FunctionSymbol::FunctionSymbol(string identifier, Node* body) :
-    Symbol(identifier)
-{
-    _type = SymbolType::FunctionDeclaration;
-}
 
 
 void SymbolTable::push_symbol(string key, Symbol* symbol) {

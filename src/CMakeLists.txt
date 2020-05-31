@@ -7,7 +7,8 @@ add_library(LexerLib SHARED ${surge_SOURCE_DIR}/src/lexer/lexer.cpp
     ${surge_SOURCE_DIR}/src/lexer/tokens.cpp)
 add_library(ParserLib SHARED ${surge_SOURCE_DIR}/src/parser/parser.cpp
     ${surge_SOURCE_DIR}/src/parser/nodes.cpp)
-add_library(SymbolLib SHARED ${surge_SOURCE_DIR}/src/symbol/symbol_table.cpp)
+add_library(SymbolLib SHARED ${surge_SOURCE_DIR}/src/symbol/symbol_table.cpp
+    ${surge_SOURCE_DIR}/src/symbol/symbol.cpp)
 
 
 # variables
