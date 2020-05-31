@@ -4,12 +4,8 @@
 #include <string>
 #include <iostream>
 
-using std::cout;
-using std::endl;
-using std::string;
-
 typedef struct error {
-    string message;
+    std::string message;
     int exit_code;
 } error;
 
