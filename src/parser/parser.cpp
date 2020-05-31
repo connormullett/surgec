@@ -13,27 +13,15 @@ using std::endl;
 
 
 
-bool check_function_declaration(vector<Token*>::iterator tokens) {
-    return true;
-}
-
 FunctionDeclaration* parse_function_declaration(vector<Token*>::iterator x) {
     return new FunctionDeclaration();
 }
 
 
-bool check_program(vector<Token*>::iterator tokens) {
-    return true;
-}
-
 Program* parse_program(vector<Token*>::iterator tokens) {
     return new Program();
 }
 
-
-bool check_statement(vector<Token*>::iterator tokens) {
-    return true;
-}
 
 Statement* parse_statement(vector<Token*>::iterator tokens) {
     auto token = *(tokens);
@@ -61,10 +49,6 @@ Statement* parse_statement(vector<Token*>::iterator tokens) {
     return statement;
 }
 
-
-bool check_expression(vector<Token*>::iterator tokens) {
-    return true;
-}
 
 Expression* parse_expression(vector<Token*>::iterator tokens) {
     return new Expression();

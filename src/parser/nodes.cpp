@@ -48,3 +48,8 @@ Statement::Statement() {
 Expression::Expression() {
     type = NodeType::EXPRESSION;
 }
+
+
+IntegerNode::IntegerNode(int x) {
+    value = x;
+}

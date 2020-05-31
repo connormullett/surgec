@@ -51,3 +51,13 @@ class Expression : public Node {
 public:
     Expression();
 };
+
+
+class IntegerNode {
+private:
+    int value;
+
+public:
+    IntegerNode(int x);
+    int get_value();
+};
