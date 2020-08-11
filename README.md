@@ -3,6 +3,8 @@
 
 Support x86_64 and only x86_64
 
+STILL WIP
+
 This is not a good compiler. I wanted to experiment
 with compiler theory and implement one from scratch.
 This compiler has barely any features which can be
